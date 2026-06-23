@@ -1,0 +1,43 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff0099, #8a00ff);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    padding: 40px 20px;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+/* Contenedor principal */
+.container {
+    margin-top: 40px;
+}
+
+/* Tarjetas */
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    font-size: 20px;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
