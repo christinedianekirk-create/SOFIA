@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educación - SOFÍA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="legal.html">Legal</a>
+    <a href="finanzas.html">Finanzas</a>
+    <a href="salud.html">Salud</a>
+    <a href="educacion.html">Educación</a>
+  </nav>
+
+  <h1>Educación y Aprendizaje</h1>
+
+  <p>Bienvenida a la sección de educación de SOFÍA.  
+  Aquí encontrarás recursos simples para aprender y mejorar cada día.</p>
+
+  <ul>
+    <li>Cursos básicos</li>
+    <li>Herramientas para estudiar</li>
+    <li>Consejos para aprender más rápido</li>
+    <li>Material para niños y adultos</li>
+  </ul>
+
+  <p>Pronto agregaremos videos, guías y ejercicios interactivos.</p>
+
+</body>
+</html>
