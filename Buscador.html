@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador Inteligente - SOFÍA</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function buscar() {
+      let input = document.getElementById("entrada").value.toLowerCase();
+      let resultados = document.getElementById("resultados");
+      resultados.innerHTML = "";
+
+      const datos = [
+        "finanzas",
+        "salud",
+        "educación",
+        "legal",
+        "negocios",
+        "manualidades",
+        "recetas",
+        "postres",
+        "herramientas",
+        "motivación",
+        "ayuda",
+        "cursos"
+      ];
+
+      let encontrados = datos.filter(item => item.includes(input));
+
+      if (encontrados.length === 0) {
+        resultados.innerHTML = "<p>No se encontraron resultados.</p>";
+      } else {
+        encontrados.forEach(item => {
+          resultados.innerHTML += `<p>🔎 <a href="${item}.html">${item}</a></p>`;
+        });
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Buscador Inteligente</h1>
+    <h3>Encuentra cualquier módulo de SOFÍA</h3>
+  </header>
+
+  <main>
+    <input type="text" id="entrada" placeholder="Escribe algo...">
+    <button onclick="buscar()">Buscar</button>
+
+    <div id="resultados" class="resultados"></div>
+
+    <a href="index.html" class="back-button">⬅ Regresar al menú</a>
+  </main>
+
+  <footer>
+    <p>SOFÍA - Sistema Familiar</p>
+  </footer>
+</body>
+</html>
