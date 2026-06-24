@@ -1,259 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>SOFÍA — Plataforma Familiar Completa</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOFÍA — Tu Compañera Familiar</title>
 
-    <!-- ESTILOS COMPLETOS -->
-    <style>
-        :root {
-            --slack-bg: #1A1D21;
-            --slack-panel: #232529;
-            --slack-morado: #611f69;
-            --slack-morado-claro: #7c2b85;
-            --slack-azul: #36C5F0;
-            --slack-verde: #2EB67D;
-            --slack-rosa: #E01E5A;
-            --slack-amarillo: #ECB22E;
-            --texto: #ffffff;
-            --texto-secundario: #cfcfcf;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--slack-bg);
-            font-family: Arial, sans-serif;
-            color: var(--texto);
-        }
-
-        header {
-            background-color: var(--slack-morado);
-            padding: 20px;
-            text-align: center;
-            font-size: 26px;
-            font-weight: bold;
-            color: white;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .card {
-            background-color: var(--slack-panel);
-            border-left: 6px solid var(--slack-morado-claro);
-            padding: 18px;
-            margin: 15px 0;
-            border-radius: 10px;
-            transition: 0.2s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.02);
-            border-left-color: var(--slack-azul);
-            box-shadow: 0 0 12px rgba(97,31,105,0.6);
-        }
-
-        a {
-            color: var(--slack-azul);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: var(--slack-rosa);
-        }
-
-        .section {
-            display: none;
-        }
-
-        .active {
-            display: block;
-        }
-
-        .menu {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .menu button {
-            background-color: var(--slack-morado);
-            border: none;
-            padding: 12px 18px;
-            border-radius: 8px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .menu button:hover {
-            background-color: var(--slack-morado-claro);
-        }
-
-        /* NUEVO: buscador */
-        #buscador {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: none;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .oculto {
-            display: none;
-        }
-    </style>
-</head>
-
-<body>
-
-<header>SOFÍA · Plataforma Familiar Completa</header>
-
-<div class="container">
-
-    <!-- BUSCADOR -->
-    <input id="buscador" type="text" placeholder="Buscar en SOFÍA…" onkeyup="buscar()">
-
-    <!-- MENÚ -->
-    <div class="menu">
-        <button onclick="show('inicio')">Inicio</button>
-        <button onclick="show('finanzas')">Finanzas</button>
-        <button onclick="show('salud')">Salud</button>
-        <button onclick="show('educacion')">Educación</button>
-        <button onclick="show('motivacion')">Motivación</button>
-        <button onclick="show('recetas')">Recetas</button>
-        <button onclick="show('herramientas')">Herramientas</button>
-        <button onclick="show('ayuda')">Ayuda</button>
-        <button onclick="show('postres')">Postres</button>
-        <button onclick="show('manualidades')">Manualidades</button>
-        <button onclick="show('cursos')">Cursos</button>
-        <button onclick="show('historias')">Historias</button>
-    </div>
-
-    <!-- INICIO -->
-    <div id="inicio" class="section active">
-        <div class="card">
-            <h2>Bienvenida, familia 💜</h2>
-            <p>Esta es la plataforma SOFÍA, hecha con mucho amor para apoyar a la familia en México.</p>
-        </div>
-
-        <div class="card">
-            <h3>Dedicatoria</h3>
-            <p>Para Gloria Ángeles y el tío Germán Rangel, con todo el cariño de Christine.</p>
-        </div>
-    </div>
-
-    <!-- FINANZAS -->
-    <div id="finanzas" class="section">
-        <div class="card">
-            <h2>Finanzas familiares</h2>
-            <p>Aquí pueden anotar gastos, ingresos y metas de ahorro sencillas.</p>
-        </div>
-    </div>
-
-    <!-- SALUD -->
-    <div id="salud" class="section">
-        <div class="card">
-            <h2>Salud</h2>
-            <p>Recordatorios de chequeos, medicinas y hábitos saludables.</p>
-        </div>
-    </div>
-
-    <!-- EDUCACIÓN -->
-    <div id="educacion" class="section">
-        <div class="card">
-            <h2>Educación</h2>
-            <p>Ideas para estudiar, aprender oficios y mejorar poco a poco.</p>
-        </div>
-    </div>
-
-    <!-- MOTIVACIÓN -->
-    <div id="motivacion" class="section">
-        <div class="card">
-            <h2>Motivación</h2>
-            <p>Frases y recordatorios para no rendirse.</p>
-        </div>
-    </div>
-
-    <!-- RECETAS -->
-    <div id="recetas" class="section">
-        <div class="card">
-            <h2>Recetas</h2>
-            <p>Guisos, sopas y comidas económicas.</p>
-        </div>
-    </div>
-
-    <!-- HERRAMIENTAS -->
-    <div id="herramientas" class="section">
-        <div class="card">
-            <h2>Herramientas útiles</h2>
-            <p>Links, apps y recursos para el día a día.</p>
-        </div>
-    </div>
-
-    <!-- AYUDA -->
-    <div id="ayuda" class="section">
-        <div class="card">
-            <h2>Ayuda</h2>
-            <p>Contactos y apoyo familiar.</p>
-        </div>
-    </div>
-
-    <!-- POSTRES -->
-    <div id="postres" class="section">
-        <div class="card">
-            <h2>Postres</h2>
-            <p>Recetas dulces de la familia.</p>
-        </div>
-    </div>
-
-    <!-- MANUALIDADES -->
-    <div id="manualidades" class="section">
-        <div class="card">
-            <h2>Manualidades</h2>
-            <p>Tejido, bordado, barro, papel, bisutería y más.</p>
-        </div>
-    </div>
-
-    <!-- CURSOS -->
-    <div id="cursos" class="section">
-        <div class="card">
-            <h2>Cursos y oficios</h2>
-            <p>Cursos gratuitos, videos y guías para aprender.</p>
-        </div>
-    </div>
-
-    <!-- HISTORIAS -->
-    <div id="historias" class="section">
-        <div class="card">
-            <h2>Historias y libros</h2>
-            <p>Cuentos, historias y lecturas para la familia.</p>
-        </div>
-    </div>
-
-</div>
-
-<!-- SCRIPT COMPLETO -->
-<script>
-function show(section) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.getElementById(section).classList.add('active');
+<style>
+/* ------------------------------
+   ESTILO MODERNO TIPO SLACK
+--------------------------------*/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f5f7;
+    color: #333;
 }
 
-function buscar() {
-    let texto = document.getElementById("buscador").value.toLowerCase();
-    document.querySelectorAll(".card").forEach(card => {
-        card.classList.toggle("oculto", !card.innerText.toLowerCase().includes(texto));
-    });
+/* HEADER */
+header {
+    background: #5b4b8a;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* MENÚ */
+nav {
+    background: #6d5fa6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    margin: 5px;
+    background: #7c6cc7;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #9a8ff0;
+}
+
+/* CONTENIDO */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* TÍTULOS */
+h2 {
+    color: #5b4b8a;
+}
+
+/* TARJETAS */
+.card {
+    background: #f7f7fb;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 5px solid #7c6cc7;
+}
+
+/* BOTONES */
+button {
+    background: #5b4b8a;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #7c6cc7;
+}
+</style>
+
+<script>
+function mostrar(seccion) {
+    document.querySelectorAll("section").forEach(s => s.style.display = "none");
+    document.getElementById(seccion).style.display = "block";
 }
 </script>
+
+</head>
+<body>
+
+<header>SOFÍA — Tu Compañera Familiar</header>
+
+<nav>
+    <a onclick="mostrar('inicio')">Inicio</a>
+    <a onclick="mostrar('finanzas')">Finanzas</a>
+    <a onclick="mostrar('salud')">Salud</a>
+    <a onclick="mostrar('educacion')">Educación</a>
+    <a onclick="mostrar('motivacion')">Motivación</a>
+    <a onclick="mostrar('recetas')">Recetas</a>
+    <a onclick="mostrar('postres')">Postres</a>
+    <a onclick="mostrar('manualidades')">Manualidades</a>
+    <a onclick="mostrar('herramientas')">Herramientas</a>
+    <a onclick="mostrar('ayuda')">Ayuda</a>
+</nav>
+
+<!-- ------------------------------
+     SECCIÓN INICIO
+---------------------------------->
+<section id="inicio">
+    <h2>Bienvenida, Familia</h2>
+    <div class="card">
+        Esta es la plataforma SOFÍA, creada para ayudar a tu familia con:
+        <ul>
+            <li>Trámites legales</li>
+            <li>Finanzas</li>
+            <li>Salud</li>
+            <li>Educación</li>
+            <li>Recetas y comida</li>
+            <li>Motivación diaria</li>
+            <li>Herramientas útiles</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ------------------------------
+     FINANZAS
+---------------------------------->
+<section id="finanzas" style="display:none;">
+    <h2>Finanzas</h2>
+    <div class="card">Cómo ahorrar dinero día a día.</div>
+    <div class="card">Cómo organizar tus gastos.</div>
+    <div class="card">Cómo empezar un pequeño negocio.</div>
+</section>
+
+<!-- ------------------------------
+     SALUD
+---------------------------------->
+<section id="salud" style="display:none;">
+    <h2>Salud</h2>
+    <div class="card">Cuidados para personas con diabetes.</div>
+    <div class="card">Remedios caseros seguros.</div>
+    <div class="card">Primeros auxilios básicos.</div>
+</section>
+
+<!-- ------------------------------
+     EDUCACIÓN
+---------------------------------->
+<section id="educacion" style="display:none;">
+    <h2>Educación</h2>
+    <div class="card">Cursos básicos para aprender rápido.</div>
+    <div class="card">Guías para tareas escolares.</div>
+</section>
+
+<!-- ------------------------------
+     MOTIVACIÓN
+---------------------------------->
+<section id="motivacion" style="display:none;">
+    <h2>Motivación</h2>
+    <div class="card">Frases para seguir adelante.</div>
+    <div class="card">Consejos para no rendirse.</div>
+</section>
+
+<!-- ------------------------------
+     RECETAS
+---------------------------------->
+<section id="recetas" style="display:none;">
+    <h2>Recetas</h2>
+    <div class="card">Comidas fáciles y económicas.</div>
+    <div class="card">Ideas para toda la familia.</div>
+</section>
+
+<!-- ------------------------------
+     POSTRES
+---------------------------------->
+<section id="postres" style="display:none;">
+    <h2>Postres</h2>
+    <div class="card">Gelatinas</div>
+    <div class="card">Flanes</div>
+    <div class="card">Bolis y helados</div>
+</section>
+
+<!-- ------------------------------
+     MANUALIDADES
+---------------------------------->
+<section id="manualidades" style="display:none;">
+    <h2>Manualidades</h2>
+    <div class="card">Tejido paso a paso.</div>
+    <div class="card">Decoraciones fáciles.</div>
+</section>
+
+<!-- ------------------------------
+     HERRAMIENTAS
+---------------------------------->
+<section id="herramientas" style="display:none;">
+    <h2>Herramientas</h2>
+    <div class="card">Calculadora rápida.</div>
+    <div class="card">Notas rápidas.</div>
+</section>
+
+<!-- ------------------------------
+     AYUDA
+---------------------------------->
+<section id="ayuda" style="display:none;">
+    <h2>Ayuda</h2>
+    <div class="card">¿Necesitas asistencia? Aquí estamos.</div>
+</section>
 
 </body>
 </html>
