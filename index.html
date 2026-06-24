@@ -1,3 +1,4 @@
+====================  index.html  ====================
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,59 +10,308 @@
 
 <body>
 
-    <!-- HEADER -->
     <header>
         SOFÍA — Asistente Familiar Inteligente
     </header>
 
-    <!-- CONTENEDOR PRINCIPAL -->
     <div class="container">
 
         <h2>Bienvenida, Christine 💜</h2>
         <p>Selecciona una sección para continuar:</p>
 
-        <!-- TARJETAS DE NAVEGACIÓN -->
-        <div class="card">
-            <a href="Finanzas.html">💰 Finanzas</a>
-        </div>
-
-        <div class="card">
-            <a href="Salud.html">🩺 Salud</a>
-        </div>
-
-        <div class="card">
-            <a href="Educacion.html">📚 Educación</a>
-        </div>
-
-        <div class="card">
-            <a href="Negocios.html">📈 Negocios</a>
-        </div>
-
-        <div class="card">
-            <a href="Recetas.html">🍲 Recetas</a>
-        </div>
-
-        <div class="card">
-            <a href="Postres.html">🍰 Postres</a>
-        </div>
-
-        <div class="card">
-            <a href="Motivacion.html">✨ Motivación</a>
-        </div>
-
-        <div class="card">
-            <a href="Herramientas.html">🛠️ Herramientas</a>
-        </div>
-
-        <div class="card">
-            <a href="Escaneador.html">📄 Escaneador Inteligente</a>
-        </div>
-
-        <div class="card">
-            <a href="Ayuda.html">❓ Ayuda</a>
-        </div>
+        <div class="card"><a href="Finanzas.html">💰 Finanzas</a></div>
+        <div class="card"><a href="Salud.html">🩺 Salud</a></div>
+        <div class="card"><a href="Educacion.html">📚 Educación</a></div>
+        <div class="card"><a href="Negocios.html">📈 Negocios</a></div>
+        <div class="card"><a href="Recetas.html">🍲 Recetas</a></div>
+        <div class="card"><a href="Postres.html">🍰 Postres</a></div>
+        <div class="card"><a href="Motivacion.html">✨ Motivación</a></div>
+        <div class="card"><a href="Herramientas.html">🛠️ Herramientas</a></div>
+        <div class="card"><a href="Escaneador.html">📄 Escaneador Inteligente</a></div>
+        <div class="card"><a href="Ayuda.html">❓ Ayuda</a></div>
 
     </div>
+
+</body>
+</html>
+
+====================  style.css  ====================
+/* ====== PALETA DE COLORES SLACK ====== */
+:root {
+    --slack-bg: #1A1D21;
+    --slack-panel: #232529;
+    --slack-morado: #611f69;
+    --slack-morado-claro: #7c2b85;
+    --slack-azul: #36C5F0;
+    --slack-verde: #2EB67D;
+    --slack-rosa: #E01E5A;
+    --slack-amarillo: #ECB22E;
+    --texto: #ffffff;
+    --texto-secundario: #cfcfcf;
+}
+
+/* ====== ESTILO GENERAL ====== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--slack-bg);
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+}
+
+/* ====== HEADER ====== */
+header {
+    background-color: var(--slack-morado);
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.container {
+    padding: 20px;
+}
+
+/* ====== TARJETAS ====== */
+.card {
+    background-color: var(--slack-panel);
+    border-left: 6px solid var(--slack-morado-claro);
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    border-left-color: var(--slack-azul);
+    box-shadow: 0 0 12px rgba(97,31,105,0.6);
+}
+
+/* ====== LINKS ====== */
+a {
+    color: var(--slack-azul);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--slack-rosa);
+}
+
+====================  script.js  ====================
+console.log("SOFÍA cargada correctamente 💜");
+
+====================  Finanzas.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Finanzas - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>💰 Finanzas</header>
+
+<div class="container">
+    <div class="card">Consejos para ahorrar dinero</div>
+    <div class="card">Cómo crear un presupuesto familiar</div>
+    <div class="card">Guía para mejorar tu crédito</div>
+</div>
+
+</body>
+</html>
+
+====================  Salud.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Salud - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🩺 Salud</header>
+
+<div class="container">
+    <div class="card">Clínicas económicas en tu zona</div>
+    <div class="card">Primeros auxilios básicos</div>
+    <div class="card">Salud mental y bienestar</div>
+</div>
+
+</body>
+</html>
+
+====================  Educacion.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Educación - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>📚 Educación</header>
+
+<div class="container">
+    <div class="card">Cursos gratuitos</div>
+    <div class="card">Becas disponibles</div>
+    <div class="card">Herramientas de estudio</div>
+</div>
+
+</body>
+</html>
+
+====================  Negocios.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Negocios - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>📈 Negocios</header>
+
+<div class="container">
+    <div class="card">Cómo iniciar un negocio</div>
+    <div class="card">Ideas de emprendimiento</div>
+    <div class="card">Marketing básico</div>
+</div>
+
+</body>
+</html>
+
+====================  Recetas.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recetas - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🍲 Recetas</header>
+
+<div class="container">
+    <div class="card">Comidas económicas</div>
+    <div class="card">Recetas mexicanas</div>
+    <div class="card">Ideas rápidas</div>
+</div>
+
+</body>
+</html>
+
+====================  Postres.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Postres - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🍰 Postres</header>
+
+<div class="container">
+    <div class="card">Postres fáciles</div>
+    <div class="card">Bolis y helados</div>
+    <div class="card">Repostería económica</div>
+</div>
+
+</body>
+</html>
+
+====================  Motivacion.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Motivación - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>✨ Motivación</header>
+
+<div class="container">
+    <div class="card">Frases motivadoras</div>
+    <div class="card">Historias reales</div>
+    <div class="card">Consejos para seguir adelante</div>
+</div>
+
+</body>
+</html>
+
+====================  Herramientas.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Herramientas - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🛠️ Herramientas</header>
+
+<div class="container">
+    <div class="card">Calculadora</div>
+    <div class="card">Conversor</div>
+    <div class="card">Notas rápidas</div>
+</div>
+
+</body>
+</html>
+
+====================  Escaneador.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Escaneador - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>📄 Escaneador Inteligente</header>
+
+<div class="container">
+    <div class="card">Sube una foto para escanear</div>
+    <div class="card">Detectar texto</div>
+    <div class="card">Guardar documento</div>
+</div>
+
+</body>
+</html>
+
+====================  Ayuda.html  ====================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ayuda - SOFÍA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>❓ Ayuda</header>
+
+<div class="container">
+    <div class="card">¿Cómo usar SOFÍA?</div>
+    <div class="card">Preguntas frecuentes</div>
+    <div class="card">Contacto</div>
+</div>
 
 </body>
 </html>
