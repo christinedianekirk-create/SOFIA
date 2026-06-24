@@ -3,89 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOFÍA — Tu Compañera Familiar</title>
+<title>SOFÍA — Cyberpunk</title>
 
 <style>
-/* ------------------------------
-   ESTILO MODERNO TIPO SLACK
---------------------------------*/
+/* -----------------------------------------
+   FONDO ANIMADO CYBERPUNK
+------------------------------------------*/
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f4f5f7;
-    color: #333;
+    background: radial-gradient(circle at top, #1a0f2e, #0a0314);
+    color: #e8d9ff;
+    overflow-x: hidden;
 }
 
-/* HEADER */
+/* Partículas flotando */
+@keyframes float {
+    0% { transform: translateY(0) translateX(0); opacity: 0.4; }
+    50% { transform: translateY(-40px) translateX(20px); opacity: 1; }
+    100% { transform: translateY(0) translateX(0); opacity: 0.4; }
+}
+
+.particle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #b06bff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #b06bff;
+    animation: float 6s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* -----------------------------------------
+   HEADER FUTURISTA
+------------------------------------------*/
 header {
-    background: #5b4b8a;
-    padding: 20px;
-    color: white;
+    background: linear-gradient(90deg, #3d1b6b, #7a2cff, #3d1b6b);
+    padding: 28px;
     text-align: center;
-    font-size: 26px;
+    font-size: 34px;
     font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+    text-shadow: 0 0 18px #c28bff;
+    border-bottom: 3px solid #9d4bff;
+    box-shadow: 0 0 25px #7a2cff;
 }
 
-/* MENÚ */
+/* -----------------------------------------
+   MENÚ NEÓN
+------------------------------------------*/
 nav {
-    background: #6d5fa6;
+    background: rgba(40, 10, 70, 0.6);
+    backdrop-filter: blur(12px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px;
+    padding: 18px;
+    border-bottom: 2px solid #7a2cff;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 12px 18px;
-    margin: 5px;
-    background: #7c6cc7;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.2s;
+    padding: 14px 22px;
+    margin: 6px;
+    background: linear-gradient(145deg, #5a1fa3, #3a1466);
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 0 14px #7a2cff;
+    transition: 0.25s;
 }
 
 nav a:hover {
-    background: #9a8ff0;
+    background: linear-gradient(145deg, #9d4bff, #5a1fa3);
+    box-shadow: 0 0 22px #c28bff;
+    transform: scale(1.08);
 }
 
-/* CONTENIDO */
+/* -----------------------------------------
+   SECCIONES HOLOGRÁFICAS
+------------------------------------------*/
 section {
-    padding: 20px;
-    margin: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 28px;
+    margin: 28px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(150, 100, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border-left: 5px solid #b06bff;
 }
 
 /* TÍTULOS */
 h2 {
-    color: #5b4b8a;
+    color: #d7b3ff;
+    text-shadow: 0 0 14px #b06bff;
 }
 
 /* TARJETAS */
 .card {
-    background: #f7f7fb;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    border-left: 5px solid #7c6cc7;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    border-left: 6px solid #c28bff;
+    box-shadow: 0 0 18px rgba(150, 100, 255, 0.25);
 }
 
 /* BOTONES */
 button {
-    background: #5b4b8a;
+    background: linear-gradient(145deg, #7a2cff, #4b1a8a);
     color: white;
-    padding: 10px 16px;
+    padding: 14px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
     font-weight: bold;
+    box-shadow: 0 0 18px #7a2cff;
 }
 
 button:hover {
-    background: #7c6cc7;
+    background: linear-gradient(145deg, #b06bff, #7a2cff);
+    box-shadow: 0 0 25px #c28bff;
 }
 </style>
 
@@ -99,7 +139,13 @@ function mostrar(seccion) {
 </head>
 <body>
 
-<header>SOFÍA — Tu Compañera Familiar</header>
+<!-- Partículas -->
+<div class="particle" style="top:10%; left:20%; animation-duration:7s;"></div>
+<div class="particle" style="top:40%; left:70%; animation-duration:5s;"></div>
+<div class="particle" style="top:80%; left:30%; animation-duration:9s;"></div>
+<div class="particle" style="top:60%; left:10%; animation-duration:6s;"></div>
+
+<header>SOFÍA — Cyberpunk Neón</header>
 
 <nav>
     <a onclick="mostrar('inicio')">Inicio</a>
@@ -114,106 +160,56 @@ function mostrar(seccion) {
     <a onclick="mostrar('ayuda')">Ayuda</a>
 </nav>
 
-<!-- ------------------------------
-     SECCIÓN INICIO
----------------------------------->
 <section id="inicio">
-    <h2>Bienvenida, Familia</h2>
+    <h2>Bienvenida a SOFÍA</h2>
     <div class="card">
-        Esta es la plataforma SOFÍA, creada para ayudar a tu familia con:
-        <ul>
-            <li>Trámites legales</li>
-            <li>Finanzas</li>
-            <li>Salud</li>
-            <li>Educación</li>
-            <li>Recetas y comida</li>
-            <li>Motivación diaria</li>
-            <li>Herramientas útiles</li>
-        </ul>
+        Plataforma futurista creada para tu familia con amor y visión.
     </div>
 </section>
 
-<!-- ------------------------------
-     FINANZAS
----------------------------------->
 <section id="finanzas" style="display:none;">
     <h2>Finanzas</h2>
-    <div class="card">Cómo ahorrar dinero día a día.</div>
-    <div class="card">Cómo organizar tus gastos.</div>
-    <div class="card">Cómo empezar un pequeño negocio.</div>
+    <div class="card">Consejos para ahorrar.</div>
 </section>
 
-<!-- ------------------------------
-     SALUD
----------------------------------->
 <section id="salud" style="display:none;">
     <h2>Salud</h2>
-    <div class="card">Cuidados para personas con diabetes.</div>
-    <div class="card">Remedios caseros seguros.</div>
-    <div class="card">Primeros auxilios básicos.</div>
+    <div class="card">Cuidados importantes.</div>
 </section>
 
-<!-- ------------------------------
-     EDUCACIÓN
----------------------------------->
 <section id="educacion" style="display:none;">
     <h2>Educación</h2>
-    <div class="card">Cursos básicos para aprender rápido.</div>
-    <div class="card">Guías para tareas escolares.</div>
+    <div class="card">Guías y cursos.</div>
 </section>
 
-<!-- ------------------------------
-     MOTIVACIÓN
----------------------------------->
 <section id="motivacion" style="display:none;">
     <h2>Motivación</h2>
-    <div class="card">Frases para seguir adelante.</div>
-    <div class="card">Consejos para no rendirse.</div>
+    <div class="card">Frases poderosas.</div>
 </section>
 
-<!-- ------------------------------
-     RECETAS
----------------------------------->
 <section id="recetas" style="display:none;">
     <h2>Recetas</h2>
-    <div class="card">Comidas fáciles y económicas.</div>
-    <div class="card">Ideas para toda la familia.</div>
+    <div class="card">Comidas fáciles.</div>
 </section>
 
-<!-- ------------------------------
-     POSTRES
----------------------------------->
 <section id="postres" style="display:none;">
     <h2>Postres</h2>
-    <div class="card">Gelatinas</div>
-    <div class="card">Flanes</div>
-    <div class="card">Bolis y helados</div>
+    <div class="card">Gelatinas, flanes y más.</div>
 </section>
 
-<!-- ------------------------------
-     MANUALIDADES
----------------------------------->
 <section id="manualidades" style="display:none;">
     <h2>Manualidades</h2>
-    <div class="card">Tejido paso a paso.</div>
-    <div class="card">Decoraciones fáciles.</div>
+    <div class="card">Tejido y decoraciones.</div>
 </section>
 
-<!-- ------------------------------
-     HERRAMIENTAS
----------------------------------->
 <section id="herramientas" style="display:none;">
     <h2>Herramientas</h2>
-    <div class="card">Calculadora rápida.</div>
-    <div class="card">Notas rápidas.</div>
+    <div class="card">Calculadora y notas.</div>
 </section>
 
-<!-- ------------------------------
-     AYUDA
----------------------------------->
 <section id="ayuda" style="display:none;">
     <h2>Ayuda</h2>
-    <div class="card">¿Necesitas asistencia? Aquí estamos.</div>
+    <div class="card">¿Necesitas asistencia?</div>
 </section>
 
 </body>
