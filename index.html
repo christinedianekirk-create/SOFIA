@@ -6,126 +6,77 @@
 <title>SOFÍA — Cyberpunk</title>
 
 <style>
-/* -----------------------------------------
-   FONDO ANIMADO CYBERPUNK
-------------------------------------------*/
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: radial-gradient(circle at top, #1a0f2e, #0a0314);
     color: #e8d9ff;
-    overflow-x: hidden;
 }
 
-/* Partículas flotando */
-@keyframes float {
-    0% { transform: translateY(0) translateX(0); opacity: 0.4; }
-    50% { transform: translateY(-40px) translateX(20px); opacity: 1; }
-    100% { transform: translateY(0) translateX(0); opacity: 0.4; }
-}
-
-.particle {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: #b06bff;
-    border-radius: 50%;
-    box-shadow: 0 0 12px #b06bff;
-    animation: float 6s infinite ease-in-out;
-    z-index: -1;
-}
-
-/* -----------------------------------------
-   HEADER FUTURISTA
-------------------------------------------*/
+/* HEADER */
 header {
     background: linear-gradient(90deg, #3d1b6b, #7a2cff, #3d1b6b);
-    padding: 28px;
+    padding: 25px;
     text-align: center;
-    font-size: 34px;
+    font-size: 32px;
     font-weight: bold;
     color: white;
-    letter-spacing: 3px;
-    text-shadow: 0 0 18px #c28bff;
+    text-shadow: 0 0 15px #c28bff;
     border-bottom: 3px solid #9d4bff;
-    box-shadow: 0 0 25px #7a2cff;
 }
 
-/* -----------------------------------------
-   MENÚ NEÓN
-------------------------------------------*/
+/* MENÚ */
 nav {
     background: rgba(40, 10, 70, 0.6);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 18px;
-    border-bottom: 2px solid #7a2cff;
+    padding: 15px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 14px 22px;
+    padding: 12px 20px;
     margin: 6px;
     background: linear-gradient(145deg, #5a1fa3, #3a1466);
-    border-radius: 12px;
+    border-radius: 10px;
     font-weight: bold;
-    box-shadow: 0 0 14px #7a2cff;
+    box-shadow: 0 0 12px #7a2cff;
     transition: 0.25s;
 }
 
 nav a:hover {
     background: linear-gradient(145deg, #9d4bff, #5a1fa3);
-    box-shadow: 0 0 22px #c28bff;
+    box-shadow: 0 0 20px #c28bff;
     transform: scale(1.08);
 }
 
-/* -----------------------------------------
-   SECCIONES HOLOGRÁFICAS
-------------------------------------------*/
+/* SECCIONES */
 section {
-    padding: 28px;
-    margin: 28px;
+    padding: 25px;
+    margin: 25px;
     background: rgba(255, 255, 255, 0.06);
-    border-radius: 18px;
-    box-shadow: 0 0 25px rgba(150, 100, 255, 0.25);
-    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(150, 100, 255, 0.25);
     border-left: 5px solid #b06bff;
 }
 
-/* TÍTULOS */
+/* TITULOS */
 h2 {
     color: #d7b3ff;
-    text-shadow: 0 0 14px #b06bff;
+    text-shadow: 0 0 12px #b06bff;
 }
 
 /* TARJETAS */
 .card {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 14px;
-    margin-bottom: 18px;
-    border-left: 6px solid #c28bff;
-    box-shadow: 0 0 18px rgba(150, 100, 255, 0.25);
-}
-
-/* BOTONES */
-button {
-    background: linear-gradient(145deg, #7a2cff, #4b1a8a);
-    color: white;
-    padding: 14px 20px;
-    border: none;
+    padding: 18px;
     border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 0 0 18px #7a2cff;
-}
-
-button:hover {
-    background: linear-gradient(145deg, #b06bff, #7a2cff);
-    box-shadow: 0 0 25px #c28bff;
+    margin-bottom: 15px;
+    border-left: 6px solid #c28bff;
+    box-shadow: 0 0 15px rgba(150, 100, 255, 0.25);
 }
 </style>
 
@@ -138,12 +89,6 @@ function mostrar(seccion) {
 
 </head>
 <body>
-
-<!-- Partículas -->
-<div class="particle" style="top:10%; left:20%; animation-duration:7s;"></div>
-<div class="particle" style="top:40%; left:70%; animation-duration:5s;"></div>
-<div class="particle" style="top:80%; left:30%; animation-duration:9s;"></div>
-<div class="particle" style="top:60%; left:10%; animation-duration:6s;"></div>
 
 <header>SOFÍA — Cyberpunk Neón</header>
 
@@ -162,9 +107,7 @@ function mostrar(seccion) {
 
 <section id="inicio">
     <h2>Bienvenida a SOFÍA</h2>
-    <div class="card">
-        Plataforma futurista creada para tu familia con amor y visión.
-    </div>
+    <div class="card">Plataforma futurista creada para tu familia.</div>
 </section>
 
 <section id="finanzas" style="display:none;">
@@ -199,7 +142,7 @@ function mostrar(seccion) {
 
 <section id="manualidades" style="display:none;">
     <h2>Manualidades</h2>
-    <div class="card">Tejido y decoraciones.</div>
+    <div class="card">Ideas creativas.</div>
 </section>
 
 <section id="herramientas" style="display:none;">
