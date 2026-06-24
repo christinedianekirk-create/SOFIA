@@ -200,7 +200,7 @@ body {
   border-top: 1px solid rgba(31, 41, 55, 0.9);
 }
 
-/* PÁGINAS INTERNAS (Biblioteca, etc.) */
+/* PÁGINAS INTERNAS */
 .page-wrapper {
   max-width: 900px;
   margin: 2.5rem auto 3rem;
@@ -240,19 +240,4 @@ body {
 .section-box ul {
   margin-left: 1.1rem;
   margin-top: 0.3rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 640px) {
-  .hero {
-    padding-top: 2.2rem;
-  }
-
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-text h2 {
-    font-size: 1.1rem;
-  }
 }
